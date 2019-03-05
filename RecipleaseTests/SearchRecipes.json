@@ -1,0 +1,354 @@
+{
+    "criteria": {
+        "q": "lemon",
+        "allowedIngredient": null,
+        "excludedIngredient": null
+    },
+    "matches": [
+        {
+            "imageUrlsBySize": {
+                "90": "https://lh3.googleusercontent.com/1sRneVeIt7c64tCetDy6xDhrX0rlf1HFstIjOO6MAkMOB_yr9TPzqGNUPKHO2onV9XVGYkN7dDKi3V8qsivzuw=s90-c"
+            },
+            "sourceDisplayName": "I Save A2Z",
+            "ingredients": [
+                "white sugar",
+                "water",
+                "blackberries",
+                "cold water",
+                "fresh lemon juice",
+                "ice cubes"
+            ],
+            "id": "Homemade-Blue-Lemonade-2536078",
+            "smallImageUrls": [
+                "https://lh3.googleusercontent.com/XpRHgw4VTJT09upEdPYtfAD1_XzsomTfybaGWseSyxmzBSAYzCEsonJi5Wm6HK_H8cZIJkzjOt0fFdjNyICPbz8=s90"
+            ],
+            "recipeName": "Homemade Blue Lemonade",
+            "totalTimeInSeconds": 300,
+            "attributes": {
+                "course": [
+                    "Beverages"
+                ],
+                "cuisine": [
+                    "Kid-Friendly"
+                ],
+                "holiday": [
+                    "Summer"
+                ]
+            },
+            "flavors": {
+                "piquant": 0,
+                "meaty": 0,
+                "bitter": 0,
+                "sweet": 0.3333333333333333,
+                "sour": 0.16666666666666666,
+                "salty": 0
+            },
+            "rating": 4
+        },
+        {
+            "imageUrlsBySize": {
+                "90": "https://lh3.googleusercontent.com/4YPL2aMA6Zq7U-65GOxZnNZxFVtrhPfAZb9FnxhlhoIZbPN_oZ0q9MGaNTCykubDoxlJD8mSB84t2d5lRuS9ug=s90-c"
+            },
+            "sourceDisplayName": "Dessert for Two",
+            "ingredients": [
+                "unsalted butter",
+                "powdered sugar",
+                "lemon",
+                "lemon juice",
+                "vanilla",
+                "flour",
+                "corn starch",
+                "salt"
+            ],
+            "id": "Lemon-Meltaways-2424036",
+            "smallImageUrls": [
+                "https://lh3.googleusercontent.com/LXSNx0TgBEsDuLjtLG4IOBrKK5O5aUtODPlzTXrdMQvQIZSRtbUX8IzBNeA7wU7eJYo69WCRZHS5OzbDqkTR7TU=s90"
+            ],
+            "recipeName": "Lemon Meltaways",
+            "totalTimeInSeconds": 5400,
+            "attributes": {
+                "course": [
+                    "Desserts"
+                ]
+            },
+            "flavors": {
+                "sweet": 1,
+                "piquant": 0,
+                "sour": 1,
+                "salty": 1,
+                "meaty": 1,
+                "bitter": 1
+            },
+            "rating": 4
+        },
+        {
+            "imageUrlsBySize": {
+                "90": "https://lh3.googleusercontent.com/0OKgSrB0QbhpFb0bnXplAcik_5CGN9f1kl-m0JUJw_PqwbO4nWaIrhWYnjhLLi-qqHt622rR2dm-gnBQuXtzzU4=s90-c"
+            },
+            "sourceDisplayName": "Lemons for Lulu",
+            "ingredients": [
+                "ice",
+                "lemon",
+                "limes",
+                "Orange",
+                "club soda",
+                "liquid sweetener"
+            ],
+            "id": "Lemon-Lime-Virgin-Margarita-1643123",
+            "smallImageUrls": [
+                "https://lh3.googleusercontent.com/aIOyIoANxLksDHz-2vQDNbuhri8sT_BhUiGuFWJUQT_HJbkC83aqwsc_Yqv3O0JR3PJbfSYcjakpmH1EgDI2Dg4=s90"
+            ],
+            "recipeName": "Lemon Lime Virgin Margarita",
+            "totalTimeInSeconds": 600,
+            "attributes": {
+                "course": [
+                    "Beverages"
+                ]
+            },
+            "flavors": null,
+            "rating": 4
+        },
+        {
+            "imageUrlsBySize": {
+                "90": "https://lh3.googleusercontent.com/lZePtEa3lwMgTsKWFwHKEYx38DqfWBO1Sd7SjbfPrAOhaKauClyVbN0rGEM3PvBTwdyxygiEIRvDU45-lnabidQ=s90-c"
+            },
+            "sourceDisplayName": "Going My Wayz",
+            "ingredients": [
+                "lemon",
+                "olive oil",
+                "skinless, boneless chicken breast halves",
+                "garlic",
+                "unsalted chicken stock",
+                "cream of celery soup",
+                "baby spinach"
+            ],
+            "id": "Lemon-Chicken-Scallopini-With-Spinach-2594925",
+            "smallImageUrls": [
+                "https://lh3.googleusercontent.com/ZcOm5mZVh71HUnEk84bqyCztpZyAptVjMzR_bQo7Sa6En8Sd_dDQ5OKJT2TEgUrWUuA6QU7KUkWiJ8X2ukZa=s90"
+            ],
+            "recipeName": "Lemon Chicken Scallopini With Spinach",
+            "totalTimeInSeconds": 1500,
+            "attributes": {
+                "course": [
+                    "Main Dishes"
+                ]
+            },
+            "flavors": {
+                "piquant": 0,
+                "meaty": 1,
+                "bitter": 1,
+                "sweet": 1,
+                "sour": 1,
+                "salty": 1
+            },
+            "rating": 4
+        },
+        {
+            "imageUrlsBySize": {
+                "90": "https://lh3.googleusercontent.com/t52pNWIDPKqT5hxtq2aOhj1A0XhJMuQ4KpVj45e_HYQkNdY-wdM_cHtGg3GkJh3l4d-GOKxeOSV4uzvGAQFjxg=s90-c"
+            },
+            "sourceDisplayName": "Inspired Entertainment",
+            "ingredients": [
+                "broccoli",
+                "olive oil",
+                "lemon",
+                "garlic clove",
+                "salt",
+                "freshly ground black pepper"
+            ],
+            "id": "Lemon-Garlic-Broccoli-2610678",
+            "smallImageUrls": [
+                "https://lh3.googleusercontent.com/cw1XMAU7Upp5eg8McNJUTZtBFJHAWozKh69SGS8gjg_71vOATpnN32BsOLvtUiJpW5eeGD5iGjo2oKtCHwvW8A=s90"
+            ],
+            "recipeName": "Lemon Garlic Broccoli",
+            "totalTimeInSeconds": 1200,
+            "attributes": {
+                "course": [
+                    "Side Dishes"
+                ]
+            },
+            "flavors": null,
+            "rating": 4
+        },
+        {
+            "imageUrlsBySize": {
+                "90": "https://lh3.googleusercontent.com/7ZS56-ZUAUWz8cNdAeN10WF1GM3wMoE84iOwVxZid22UvPqLsbrjeOrfyNYq3eu1lbaB_-Bygt63xRMRM9K8Kg=s90-c"
+            },
+            "sourceDisplayName": "Around The Bay With DD",
+            "ingredients": [
+                "butter",
+                "sugar",
+                "lemon zest",
+                "lemon juice",
+                "all-purpose flour",
+                "icing sugar"
+            ],
+            "id": "Lemon-Meltaway-Cookies-2231429",
+            "smallImageUrls": [
+                "https://lh3.googleusercontent.com/AiAchoMatTl3s0EWv45fj-A3TONnpWEr1Ic2m6ZlsmB7jOJr-5CpkMLRo97PV8rAv1hpSSrF4lqVkIA7oDuiKz4=s90"
+            ],
+            "recipeName": "Lemon Meltaway Cookies",
+            "totalTimeInSeconds": 2100,
+            "attributes": {
+                "course": [
+                    "Desserts"
+                ]
+            },
+            "flavors": {
+                "piquant": 0,
+                "meaty": 0.8333333333333334,
+                "bitter": 0.16666666666666666,
+                "sweet": 0.6666666666666666,
+                "sour": 0.16666666666666666,
+                "salty": 0.3333333333333333
+            },
+            "rating": 4
+        },
+        {
+            "imageUrlsBySize": {
+                "90": "https://lh3.googleusercontent.com/3S0hBdsJVvRadCeUct25fC8TA6dfEjXCOs_JgViQq__A08DLKtj3GJza24V--Wge912PTEmdION01X6XSw7akw=s90-c"
+            },
+            "sourceDisplayName": "Jo Cooks",
+            "ingredients": [
+                "boneless chicken breasts",
+                "salt",
+                "pepper",
+                "all purpose flour",
+                "butter",
+                "olive oil",
+                "fresh lemon juice",
+                "chicken stock",
+                "brined capers",
+                "fresh parsley"
+            ],
+            "id": "Lemon-Chicken-Piccata-2238756",
+            "smallImageUrls": [
+                "https://lh3.googleusercontent.com/euGnGVG7z6RlSW7QCzXD4Z-OOsLznuKkTQqOvm4nerMrvWc3FsWumbmYl2BbjcwICekus1Gl-xnjP02jqOy8=s90"
+            ],
+            "recipeName": "Lemon Chicken Piccata",
+            "totalTimeInSeconds": 2400,
+            "attributes": {
+                "course": [
+                    "Main Dishes"
+                ]
+            },
+            "flavors": {
+                "piquant": 0,
+                "meaty": 0.6666666666666666,
+                "bitter": 0.8333333333333334,
+                "sweet": 0.16666666666666666,
+                "sour": 0.6666666666666666,
+                "salty": 0.8333333333333334
+            },
+            "rating": 4
+        },
+        {
+            "imageUrlsBySize": {
+                "90": "https://lh3.googleusercontent.com/NnkF0g5CEiBfTNC7DJyQjN7Uk37S2ZwNQIroVCgUMQ21ooCou14e6_pz7JZe9ua3eXWWNSZe6V3XWv0k_WO-VQs=s90-c"
+            },
+            "sourceDisplayName": "Healthy Diabetic",
+            "ingredients": [
+                "mushrooms",
+                "avocado oil",
+                "dijon mustard",
+                "granulated onion",
+                "garlic powder",
+                "Italian seasoning",
+                "lemon juiced"
+            ],
+            "id": "Lemon-Roasted-Mushrooms-2620899",
+            "smallImageUrls": [
+                "https://lh3.googleusercontent.com/6sdDN8gVv7KViGBo2Mg1ESFmhernlMDJOMhfSd0ErEmnahMd_rlIxfFwIZHDNVeMaAYu6f8eme3BN7_XVPi4Hw=s90"
+            ],
+            "recipeName": "Lemon Roasted Mushrooms",
+            "totalTimeInSeconds": 1500,
+            "attributes": {},
+            "flavors": {
+                "piquant": 0.16666666666666666,
+                "meaty": 0.3333333333333333,
+                "bitter": 0.16666666666666666,
+                "sweet": 0.16666666666666666,
+                "sour": 0.3333333333333333,
+                "salty": 0.16666666666666666
+            },
+            "rating": 4
+        },
+        {
+            "imageUrlsBySize": {
+                "90": "https://lh3.googleusercontent.com/nFnxFbtS0-tPfFgeZSn4qVnHwJqVhdk1itSKcMO_H4Z-H_m85dm_-Dwx11lWn6M67KuZ_1ke1zrA9CnDEjm0aGQ=s90-c"
+            },
+            "sourceDisplayName": "Saving Room for Dessert",
+            "ingredients": [
+                "unsalted butter",
+                "sugar",
+                "lemon zest",
+                "fresh lemon juice",
+                "unbleached all purpose flour",
+                "cornstarch",
+                "salt",
+                "confectioners' sugar"
+            ],
+            "id": "Lemon-Meltaways-1985782",
+            "smallImageUrls": [
+                "https://lh3.googleusercontent.com/jLDJ-mlRcQThw1mzfJYiHAtVf0jOcJZF6nVTxTITePMvsIoVrdUDPtiTt3UxBzRrXS0kr8SuDJxxpqvwND94WQ=s90"
+            ],
+            "recipeName": "Lemon Meltaways",
+            "totalTimeInSeconds": 1980,
+            "attributes": {
+                "course": [
+                    "Desserts",
+                    "Afternoon Tea"
+                ]
+            },
+            "flavors": {
+                "piquant": 0.5,
+                "meaty": 0.6666666666666666,
+                "bitter": 0.16666666666666666,
+                "sweet": 0.8333333333333334,
+                "sour": 0.3333333333333333,
+                "salty": 0.16666666666666666
+            },
+            "rating": 4
+        },
+        {
+            "imageUrlsBySize": {
+                "90": "https://lh3.googleusercontent.com/A-hfxyhdy02whvErNuMXUft-X8o64vpLdbWvQyqU2CMCvyerVtMt1EvCawUk3ytZR1ihJ3-DhDp-1mbz6tC_K4Y=s90-c"
+            },
+            "sourceDisplayName": "Damn Delicious",
+            "ingredients": [
+                "unsalted butter",
+                "garlic",
+                "italian seasoning",
+                "lemon",
+                "kosher salt",
+                "freshly ground black pepper",
+                "medium zucchini",
+                "fresh parsley leaves"
+            ],
+            "id": "Grilled-Lemon-Garlic-Zucchini-2257849",
+            "smallImageUrls": [
+                "https://lh3.googleusercontent.com/WSElI7aj4WDd8bppg25C_HQPAhwWc90lAFb_obBOWXgiyyvw9tPDCSoDK8nWBVlnrlbLikoeLx1RMesWTKqDDw=s90"
+            ],
+            "recipeName": "Grilled Lemon Garlic Zucchini",
+            "totalTimeInSeconds": 1200,
+            "attributes": {
+                "course": [
+                    "Side Dishes"
+                ],
+                "cuisine": [
+                    "Barbecue"
+                ]
+            },
+            "flavors": null,
+            "rating": 4
+        }
+    ],
+    "facetCounts": {},
+    "totalMatchCount": 270211,
+    "attribution": {
+        "html": "Recipe search powered by <a href='http://www.yummly.co/recipes'><img alt='Yummly' src='https://static.yummly.co/api-logo.png'/></a>",
+        "url": "http://www.yummly.co/recipes/",
+        "text": "Recipe search powered by Yummly",
+        "logo": "https://static.yummly.co/api-logo.png"
+    }
+}
