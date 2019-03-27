@@ -11,6 +11,10 @@ import CoreData
 
 class FavoriteRecipeViewController: UIViewController {
     
+    /**
+     * MARK: - Vars:
+     */
+    
     var favoritesRecipes = RecipeEntity.fetchAll()
     var stepIngredientsArray = [String]()
     var index = 0
@@ -19,6 +23,10 @@ class FavoriteRecipeViewController: UIViewController {
     var favoriteIsOn : Bool = true
     let favoriteBorderImage = UIImage(named: "Star")?.withRenderingMode(.alwaysTemplate)
     let favoriteFullImage = UIImage(named: "YellowStar")
+  
+    /**
+     * MARK: - OUTLETS:
+     */
     
     @IBOutlet weak var favoriteRecipeTableView: UITableView!
     @IBOutlet weak var recipeImage: UIImageView!
@@ -26,6 +34,9 @@ class FavoriteRecipeViewController: UIViewController {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var titleRecipe: UILabel!
     
+    /**
+     * MARK: - ViewDidLoad:
+     */
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,12 +44,20 @@ class FavoriteRecipeViewController: UIViewController {
         createFavoriteButton(favoriteStar: detectFavoriteRecipe())
     }
     
+    /**
+     * MARK: - ViewWillAppear:
+     */
+    
     override func viewWillAppear(_ animated: Bool) {
         favoriteRecipeTableView.reloadData()
     }
     
-    @objc public func favoriteButtonTapped(_ sender: UIButton) {
-        
+    /**
+     * MARK: - ACTION: Action to manage the state of the favorite icon and removing the recipe choosen from Core Data:
+     */
+    
+    @objc internal func favoriteButtonTapped(_ sender: UIButton) {
+        successVibration()
         createAnimationFavoriteButton()
         guard let favoriteRecipeID = favoritesRecipes[index].id else { return }
         RecipeEntity.deleteRecipe(favoriteRecipeID)
@@ -46,30 +65,82 @@ class FavoriteRecipeViewController: UIViewController {
         _ = navigationController?.popViewController(animated: true)
     }
     
-    func deactivateButton() {
-        createFavoriteButton(favoriteStar: favoriteBorderImage!)
+    /**
+     *Action in which we provide the URL to open the recipe into Safari Browser:
+     */
+    
+    @IBAction private func getDirectionsButton(_ sender: UIButton) {
+        mediumVibration()
+        guard let urlForSafari = favoritesRecipes[index].urlForSafari else { return }
+        guard let url = URL(string: urlForSafari) else { return }
+        UIApplication.shared.open(url)
+    }
+    
+    /**
+     * Method to create the favorite icon on the UI:
+     */
+    
+    func createFavoriteButton(favoriteStar: UIImage) {
+        let favoriteButton = UIButton(type: .system)
+        favoriteButton.tintColor = .yellow
+        favoriteButton.setImage(favoriteStar, for: .normal)
+        favoriteButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        favoriteButton.addTarget(self, action: #selector(favoriteButtonTapped), for: .touchUpInside)
+        self.favoriteBarButton = UIBarButtonItem(customView: favoriteButton)
+        self.navigationItem.setRightBarButton(favoriteBarButton, animated: false)
+    }
+    
+    /**
+     * Method to create an animation when the favorite icon is pressed:
+     */
+    
+    func createAnimationFavoriteButton() {
+        favoriteBarButton?.customView?.transform = CGAffineTransform(scaleX: 0, y: 0)
+        UIView.animate(withDuration: 0.5,
+                       delay: 0.0,
+                       usingSpringWithDamping: 0.6,
+                       initialSpringVelocity: 10,
+                       options: .curveEaseInOut,
+                       animations: {
+                        self.favoriteIsOn = !self.favoriteIsOn
+                        let image = self.favoriteIsOn ? self.favoriteFullImage : self.favoriteBorderImage
+                        if let button = self.favoriteBarButton?.customView as? UIButton {
+                            button.setImage(image, for: .normal)
+                        }
+                        self.favoriteBarButton?.customView?.transform = .identity
+        }, completion: nil)
+    }
+    
+    /**
+     * Method allowing the suppression of the recipe on Core Data:
+     */
+    
+    private func deactivateButton() {
+        createFavoriteButton(favoriteStar: favoriteBorderImage ?? UIImage())
         guard let favoriteRecipeID = favoritesRecipes[index].id else { return }
         RecipeEntity.deleteRecipe(favoriteRecipeID)
     }
+    
+    /**
+     * Method to detect if the recipe is present into Core Data and makes returning the adequate UIImage:
+     */
     
     private func detectFavoriteRecipe() -> UIImage {
         
         let favoriteRecipeID = favoritesRecipes[index].id
         
         if RecipeEntity.isRegistered(favoriteRecipeID ?? "") == true {
-            return favoriteFullImage!
+            return favoriteFullImage ?? UIImage()
         } else {
-            return favoriteBorderImage!
+            return favoriteBorderImage ?? UIImage()
         }
     }
     
-    @IBAction func getDirectionsButton(_ sender: UIButton) {
-        guard let urlForSafari = favoritesRecipes[index].urlForSafari else { return }
-        guard let url = URL(string: urlForSafari) else { return }
-        UIApplication.shared.open(url)
-    }
+    /**
+     * Method to show the recipe choosen in the UI for the user:
+     */
     
-    func displayDetailsFavoriteRecipe() {
+    private func displayDetailsFavoriteRecipe() {
         
         guard let dataImage = favoritesRecipes[index].imageRecipe else { return }
         recipeImage.image = UIImage(data: dataImage)
@@ -81,14 +152,26 @@ class FavoriteRecipeViewController: UIViewController {
         stepIngredientsArray = stepIngredients?.map({ $0.stepIngredient }) as? [String] ?? []
         
     }
+    
+    private func addGradientBig(imageView: UIImageView) {
+        let layer = CAGradientLayer()
+        layer.frame = CGRect(x: 0, y: 0, width: screenWidth, height: 240)
+        layer.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
+        layer.locations = [0.7]
+        imageView.layer.addSublayer(layer)
+    }
 }
 
+/**
+ * Extensions for the TableViewDataSource to provide datas on the TableView:
+ */
+
 extension FavoriteRecipeViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return stepIngredientsArray.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "StepIngredients", for: indexPath)
         cell.textLabel?.text = stepIngredientsArray[indexPath.row]

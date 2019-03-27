@@ -30,8 +30,16 @@ class FavoritesTableViewCell: UITableViewCell {
             recipeImage.image = UIImage(data: dataImage)
             addGradientSmall(imageView: recipeImage)
             let ingredients = recipeData.ingredientEntities?.allObjects as? [IngredientEntity]
-            let ingredientsMapped = ingredients?.map({ $0.ingredient ?? ""}).joined(separator: ",")
+            let ingredientsMapped = ingredients?.map({ $0.ingredient ?? ""}).joined(separator: ", ")
             ingredientsListLabel.text = ingredientsMapped
         }
+    }
+    
+     func addGradientSmall(imageView: UIImageView) {
+        let layer = CAGradientLayer()
+        layer.frame = CGRect(x: 0, y: 0, width: screenWidth, height: 200)
+        layer.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
+        layer.locations = [0.7]
+        imageView.layer.addSublayer(layer)
     }
 }

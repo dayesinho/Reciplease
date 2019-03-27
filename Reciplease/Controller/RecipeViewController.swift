@@ -11,15 +11,22 @@ import CoreData
 
 class RecipeViewController: UIViewController {
     
+    /**
+     * MARK: - Vars:
+     */
+    
     var favoritesRecipes = RecipeEntity.fetchAll()
     var detailRecipes : GetRecipe?
     var ingredientList = [String]()
     var stepIngredients = [String]()
-    
     var favoriteBarButton: UIBarButtonItem?
     var favoriteIsOn = Bool()
     var favoriteBorderImage = UIImage(named: "Star")?.withRenderingMode(.alwaysTemplate)
     var favoriteFullImage = UIImage(named: "YellowStar")?.withRenderingMode(.alwaysTemplate)
+    
+    /**
+     * MARK: - ViewDidLoad:
+     */
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,10 +34,18 @@ class RecipeViewController: UIViewController {
         createFavoriteButton(favoriteStar: detectFavoriteRecipe())
     }
     
+    /**
+     * MARK: - ViewDidAppear:
+     */
+    
     override func viewDidAppear(_ animated: Bool) {
         createFavoriteButton(favoriteStar: detectFavoriteRecipe())
         recipeTableView.reloadData()
     }
+    
+    /**
+     * MARK: - OUTLETS:
+     */
     
     @IBOutlet weak var recipeTableView: UITableView!
     @IBOutlet weak var recipeImageView: UIImageView!
@@ -39,14 +54,23 @@ class RecipeViewController: UIViewController {
     @IBOutlet weak var titleRecipe: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    /**
+     * Action in which we provide the URL to open the recipe into Safari Browser:
+     */
     
-    @IBAction func getDirectionsButton(_ sender: UIButton) {
+    @IBAction private func getDirectionsButton(_ sender: UIButton) {
+        mediumVibration()
         guard let detailRecipes = detailRecipes else { return }
         guard let url = URL(string: detailRecipes.source.sourceRecipeURL) else { return }
         UIApplication.shared.open(url)
     }
     
-    @objc func favoriteButtonTapped(_ sender: UIButton) {
+    /**
+     * Action to manage the behavior of the Favorite icon, detecting the recipes present in Core Data:
+     */
+    
+    @objc internal func favoriteButtonTapped(_ sender: UIButton) {
+        successVibration()
         guard let detailRecipes = detailRecipes else { return }
         
         if RecipeEntity.isRegistered(detailRecipes.id) == false {
@@ -60,15 +84,59 @@ class RecipeViewController: UIViewController {
             createFavoriteButton(favoriteStar: detectFavoriteRecipe())
         }
     }
+
+/**
+* METHODS:
+*/
     
-    // Show results on the UI:
+    /**
+     * Method to create the favorite icon on the UI:
+     */
+    
+    func createFavoriteButton(favoriteStar: UIImage) {
+        let favoriteButton = UIButton(type: .system)
+        favoriteButton.tintColor = .yellow
+        favoriteButton.setImage(favoriteStar, for: .normal)
+        favoriteButton.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        favoriteButton.addTarget(self, action: #selector(favoriteButtonTapped), for: .touchUpInside)
+        self.favoriteBarButton = UIBarButtonItem(customView: favoriteButton)
+        self.navigationItem.setRightBarButton(favoriteBarButton, animated: false)
+    }
+    
+    /**
+     * Method to create an animation when the favorite icon is pressed:
+     */
+    
+    func createAnimationFavoriteButton() {
+        favoriteBarButton?.customView?.transform = CGAffineTransform(scaleX: 0, y: 0)
+        UIView.animate(withDuration: 0.5,
+                       delay: 0.0,
+                       usingSpringWithDamping: 0.6,
+                       initialSpringVelocity: 10,
+                       options: .curveEaseInOut,
+                       animations: {
+                        self.favoriteIsOn = !self.favoriteIsOn
+                        let image = self.favoriteIsOn ? self.favoriteFullImage : self.favoriteBorderImage
+                        if let button = self.favoriteBarButton?.customView as? UIButton {
+                            button.setImage(image, for: .normal)
+                        }
+                        self.favoriteBarButton?.customView?.transform = .identity
+        }, completion: nil)
+    }
+    
+    /**
+     * Method to show the recipe choosen in the UI for the user:
+     */
     
     private func detailsForRecipe() {
         
         guard let detailRecipes = detailRecipes else { return }
         guard let imageURL = URL(string: detailRecipes.images[0].hostedLargeURL) else { return }
-        guard let recipeImage = try? Data(contentsOf: imageURL) else { return }
-        recipeImageView.image = UIImage(data: recipeImage)
+        if let recipeImage = try? Data(contentsOf: imageURL) {
+            recipeImageView.image = UIImage(data: recipeImage)
+        } else {
+            recipeImageView.image = UIImage(named: "NotAvailable")
+        }
         addGradientBig(imageView: recipeImageView)
         stepIngredients = detailRecipes.ingredientLines
         titleRecipe.text = detailRecipes.name
@@ -76,9 +144,20 @@ class RecipeViewController: UIViewController {
         rating.text = String(detailRecipes.rating)
     }
     
-    // CoreData saving datas:
+    func addGradientBig(imageView: UIImageView) {
+     
+        let layer = CAGradientLayer()
+        layer.frame = CGRect(x: 0, y: 0, width: screenWidth, height: 240)
+        layer.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
+        layer.locations = [0.7]
+        imageView.layer.addSublayer(layer)
+    }
     
-    func saveRecipeDetails() {
+    /**
+     * Method to save the details of the recipe into Core Data:
+     */
+    
+    private func saveRecipeDetails() {
         
         guard let detailRecipes = detailRecipes else { return }
         guard let imageURL = URL(string: (detailRecipes.images[0].hostedLargeURL).updateSizeOfUrlImageString) else { return }
@@ -95,7 +174,7 @@ class RecipeViewController: UIViewController {
         try? AppDelegate.viewContext.save()
     }
     
-    func saveIngredient(recipeEntity: RecipeEntity) {
+    private func saveIngredient(recipeEntity: RecipeEntity) {
         for ingredient in ingredientList {
             let ingredientContext = IngredientEntity(context: AppDelegate.viewContext)
             ingredientContext.ingredient = ingredient
@@ -103,7 +182,7 @@ class RecipeViewController: UIViewController {
         }
     }
     
-    func saveStepIngredient(recipeEntity: RecipeEntity) {
+    private func saveStepIngredient(recipeEntity: RecipeEntity) {
         for stepIngredient in stepIngredients {
             let stepIngredientContext = StepIngredientEntity(context: AppDelegate.viewContext)
             stepIngredientContext.stepIngredient = stepIngredient
@@ -111,27 +190,32 @@ class RecipeViewController: UIViewController {
         }
     }
     
-    func detectFavoriteRecipe() -> UIImage {
+    /**
+     * Method to detect if the recipe is present into Core Data and makes returning the adequate UIImage:
+     */
+    
+    private func detectFavoriteRecipe() -> UIImage {
         
-        guard let detailRecipes = detailRecipes else { return favoriteBorderImage!}
-        if RecipeEntity.isRegistered(detailRecipes.id) == true {
-            return favoriteFullImage!
+        if RecipeEntity.isRegistered(detailRecipes?.id ?? "") == false {
+            return favoriteBorderImage ?? UIImage()
         } else {
-            return favoriteBorderImage!
+            return favoriteFullImage ?? UIImage()
         }
     }
 }
 
-// Extension for TableViewDataSource:
+/**
+* Extensions for the TableViewDataSource to provide datas on the TableView:
+*/
 
 extension RecipeViewController : UITableViewDataSource {
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return stepIngredients.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "DetailsCell", for: indexPath)

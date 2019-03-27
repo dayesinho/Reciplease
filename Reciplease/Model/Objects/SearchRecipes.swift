@@ -10,6 +10,7 @@ import Foundation
 
 struct SearchRecipes: Decodable {
     let matches: [Match]
+    let totalMatchCount: Int
 }
 
 struct Match: Decodable {

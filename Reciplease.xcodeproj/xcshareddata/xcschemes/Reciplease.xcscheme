@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1010"
+   LastUpgradeVersion = "1020"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -28,7 +28,7 @@
             buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "01BAA9F52210416900A7C5D7"
+               BlueprintIdentifier = "01924C76222F0A9B00A77E58"
                BuildableName = "RecipleaseTests.xctest"
                BlueprintName = "RecipleaseTests"
                ReferencedContainer = "container:Reciplease.xcodeproj">
@@ -47,7 +47,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "01BAA9F52210416900A7C5D7"
+               BlueprintIdentifier = "01924C76222F0A9B00A77E58"
                BuildableName = "RecipleaseTests.xctest"
                BlueprintName = "RecipleaseTests"
                ReferencedContainer = "container:Reciplease.xcodeproj">

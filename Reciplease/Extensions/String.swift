@@ -19,3 +19,12 @@ extension String {
         return self.dropLast(2) + "360"
     }
 }
+
+extension Optional where Wrapped == String {
+    var nilIfEmpty: String? {
+        guard let strongSelf = self else {
+            return nil
+        }
+        return strongSelf.isEmpty ? nil : strongSelf
+    }
+}

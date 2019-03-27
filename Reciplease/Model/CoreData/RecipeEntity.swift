@@ -13,49 +13,34 @@ class RecipeEntity: NSManagedObject {
     
     static func fetchAll(viewContext: NSManagedObjectContext = AppDelegate.viewContext) -> [RecipeEntity] {
         let request: NSFetchRequest<RecipeEntity> = RecipeEntity.fetchRequest()
-        guard let recipes = try? AppDelegate.viewContext.fetch(request) else {
-            return []
-        }
+        guard let recipes = try? AppDelegate.viewContext.fetch(request) else { return [] }
         return recipes
     }
     
-    static func deleteRecipe(_ id: String) {
+    static func deleteRecipe(_ id: String, viewContext: NSManagedObjectContext = AppDelegate.viewContext) {
         let request: NSFetchRequest<RecipeEntity> = RecipeEntity.fetchRequest()
         request.predicate = NSPredicate(format: "id == %@", id)
-        do {
-            let recipe = try AppDelegate.viewContext.fetch(request)
-            if recipe.isEmpty == false {
-                AppDelegate.viewContext.delete(recipe[0])
-                try? AppDelegate.viewContext.save()
-            }
-        } catch let error as NSError {
-            print("Error fetching data from context \(error)")
-        }
+        guard let recipes = try? viewContext.fetch(request) else { return }
+        guard let recipe = recipes.first else { return }
+        viewContext.delete(recipe)
+        try? viewContext.save()
     }
     
-    static func isRegistered(_ id: String) -> Bool {
+    static func isRegistered(_ id: String, viewContext: NSManagedObjectContext = AppDelegate.viewContext) -> Bool {
         
         let request: NSFetchRequest<RecipeEntity> = RecipeEntity.fetchRequest()
         request.predicate = NSPredicate(format: "id == %@", id)
-        do {
-            let recipe = try AppDelegate.viewContext.fetch(request)
-            if recipe.isEmpty {
-                return false
-            }
-        } catch let error as NSError {
-            print("Error fetching data from context \(error)")
-        }
+        let recipe = try? viewContext.fetch(request)
+        if recipe?.isEmpty ?? false { return false }
         return true
     }
     
-//    static func searchBar(with searchBarInput: String) -> [RecipeEntity] {
-//        let request: NSFetchRequest<RecipeEntity> = RecipeEntity.fetchRequest()
-//        request.predicate = NSPredicate(format: "title CONTAINS %@", searchBarInput)
-//        request.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
-//        do {
-//            guard let recipes = try? AppDelegate.viewContext.fetch(request) else { return [] }
-//        }
-//         return recipes
-//    }
+    static func fetchByName(with searchBarInput: String, viewContext: NSManagedObjectContext = AppDelegate.viewContext) -> [RecipeEntity] {
+        let request: NSFetchRequest<RecipeEntity> = RecipeEntity.fetchRequest()
+        request.predicate = NSPredicate(format: "title CONTAINS %@", searchBarInput)
+        request.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
+        guard let recipes = try? viewContext.fetch(request) else { return [] }
+        return recipes
+    }
 }
 

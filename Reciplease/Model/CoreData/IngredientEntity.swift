@@ -9,13 +9,5 @@
 import Foundation
 import CoreData
 
-class IngredientEntity: NSManagedObject {
-    static func fetchAll(viewContext: NSManagedObjectContext = AppDelegate.viewContext) -> [IngredientEntity] {
-        let request: NSFetchRequest<IngredientEntity> = IngredientEntity.fetchRequest()
-        guard let ingredient = try? AppDelegate.viewContext.fetch(request) else {
-            return []
-        }
-        return ingredient
-    }
-}
+class IngredientEntity: NSManagedObject {}
 

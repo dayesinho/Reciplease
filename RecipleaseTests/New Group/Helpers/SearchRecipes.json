@@ -1,0 +1,354 @@
+{
+    "criteria": {
+        "allowedIngredient": [
+            "lemon"
+        ],
+        "q": null,
+        "excludedIngredient": null
+    },
+    "matches": [
+        {
+            "imageUrlsBySize": {
+                "90": "https://lh3.googleusercontent.com/vC0xf5yxF013hImdlGWAu_GbRq1XRF68xoYcb35yVWmfmRfJV7zc3KRuzqAz4IGRZtcqxSvzrOTsR8KIt7ED4A=s90-c"
+            },
+            "sourceDisplayName": "Rants From My Crazy Kitchen",
+            "ingredients": [
+                "avocados",
+                "cooked shrimp",
+                "cooked crab",
+                "cheddar",
+                "vidalia onion",
+                "eggs",
+                "fresh parsley",
+                "lemon juice",
+                "seafood seasoning"
+            ],
+            "id": "Baked-Seafood-Stuffed-Avocados-2676307",
+            "smallImageUrls": [
+                "https://lh3.googleusercontent.com/QbRqZocTvMKbGLD5DwERLWXuOzaC456D-SsAiGxVYqRdtpqTQ49VjOyZoHlcRljkySA4RBCeQOy5sseJq-dMig=s90"
+            ],
+            "recipeName": "Baked Seafood Stuffed Avocados",
+            "totalTimeInSeconds": 2100,
+            "attributes": {},
+            "flavors": {
+                "piquant": 0,
+                "meaty": 0.6666666666666666,
+                "bitter": 0.8333333333333334,
+                "sweet": 0.16666666666666666,
+                "sour": 0.6666666666666666,
+                "salty": 0.16666666666666666
+            },
+            "rating": 4
+        },
+        {
+            "imageUrlsBySize": {
+                "90": "https://lh3.googleusercontent.com/lZePtEa3lwMgTsKWFwHKEYx38DqfWBO1Sd7SjbfPrAOhaKauClyVbN0rGEM3PvBTwdyxygiEIRvDU45-lnabidQ=s90-c"
+            },
+            "sourceDisplayName": "Going My Wayz",
+            "ingredients": [
+                "lemon",
+                "olive oil",
+                "skinless, boneless chicken breast halves",
+                "garlic",
+                "unsalted chicken stock",
+                "cream of celery soup",
+                "baby spinach"
+            ],
+            "id": "Lemon-Chicken-Scallopini-With-Spinach-2594925",
+            "smallImageUrls": [
+                "https://lh3.googleusercontent.com/ZcOm5mZVh71HUnEk84bqyCztpZyAptVjMzR_bQo7Sa6En8Sd_dDQ5OKJT2TEgUrWUuA6QU7KUkWiJ8X2ukZa=s90"
+            ],
+            "recipeName": "Lemon Chicken Scallopini With Spinach",
+            "totalTimeInSeconds": 1500,
+            "attributes": {
+                "course": [
+                    "Main Dishes"
+                ]
+            },
+            "flavors": {
+                "piquant": 0,
+                "meaty": 1,
+                "bitter": 1,
+                "sweet": 1,
+                "sour": 1,
+                "salty": 1
+            },
+            "rating": 4
+        },
+        {
+            "imageUrlsBySize": {
+                "90": "https://lh3.googleusercontent.com/0OKgSrB0QbhpFb0bnXplAcik_5CGN9f1kl-m0JUJw_PqwbO4nWaIrhWYnjhLLi-qqHt622rR2dm-gnBQuXtzzU4=s90-c"
+            },
+            "sourceDisplayName": "Lemons for Lulu",
+            "ingredients": [
+                "ice",
+                "lemon",
+                "limes",
+                "Orange",
+                "club soda",
+                "liquid sweetener"
+            ],
+            "id": "Lemon-Lime-Virgin-Margarita-1643123",
+            "smallImageUrls": [
+                "https://lh3.googleusercontent.com/aIOyIoANxLksDHz-2vQDNbuhri8sT_BhUiGuFWJUQT_HJbkC83aqwsc_Yqv3O0JR3PJbfSYcjakpmH1EgDI2Dg4=s90"
+            ],
+            "recipeName": "Lemon Lime Virgin Margarita",
+            "totalTimeInSeconds": 600,
+            "attributes": {
+                "course": [
+                    "Beverages"
+                ]
+            },
+            "flavors": null,
+            "rating": 4
+        },
+        {
+            "imageUrlsBySize": {
+                "90": "https://lh3.googleusercontent.com/-ofv3WQeIC0TM_LCgz1ipRBGneKZtVGAV4twLylFVeKXiobR7ehNl98ValbguJcf8sL4G_FXHkBSXmKFFpIFQw=s90-c"
+            },
+            "sourceDisplayName": "Averie Cooks",
+            "ingredients": [
+                "angel hair pasta",
+                "unsalted butter",
+                "garlic powder",
+                "large shrimp",
+                "salt",
+                "pepper",
+                "lemon juice",
+                "lemon zest"
+            ],
+            "id": "Lemon-Butter-Garlic-Shrimp-With-Angel-Hair-Pasta-2587191",
+            "smallImageUrls": [
+                "https://lh3.googleusercontent.com/EhzKpBo_6735Gv7nKj-mvqJkYvlADUcxtUSDhRFxXhZSIHUoG7bVyg93d4oWQ37aKED90wWnKKi04mohWYRI=s90"
+            ],
+            "recipeName": "Lemon Butter Garlic Shrimp With Angel Hair Pasta",
+            "totalTimeInSeconds": 900,
+            "attributes": {
+                "course": [
+                    "Main Dishes"
+                ]
+            },
+            "flavors": {
+                "piquant": 0,
+                "meaty": 1,
+                "bitter": 1,
+                "sweet": 1,
+                "sour": 1,
+                "salty": 1
+            },
+            "rating": 4
+        },
+        {
+            "imageUrlsBySize": {
+                "90": "https://lh3.googleusercontent.com/d0YRvJ4DjycmLRtkDXLbs9Z_KG6u_fSW4w9PAUUJGcK7_83UHI2UReTVRhqc1YORvoOWEZUvec3XPqlAGxED1w=s90-c"
+            },
+            "sourceDisplayName": "Giggles, Gobbles and Gulps",
+            "ingredients": [
+                "lemonade",
+                "lemon",
+                "strawberries",
+                "blueberries",
+                "lemon lime soda"
+            ],
+            "id": "Red_-White-and-Blue-Lemonade-Mocktail-1945406",
+            "smallImageUrls": [
+                "https://lh3.googleusercontent.com/yWfUMP74VTSfv0HF1H2x-AYJeZEg43XkWA3sBjKqTFzaL_SeXNenxGFR353xH7ifDZEwFtw6vjtf0FEeUn9q8Q=s90"
+            ],
+            "recipeName": "Red, White and Blue Lemonade Mocktail",
+            "totalTimeInSeconds": 600,
+            "attributes": {
+                "course": [
+                    "Beverages"
+                ],
+                "holiday": [
+                    "4th of July"
+                ]
+            },
+            "flavors": null,
+            "rating": 4
+        },
+        {
+            "imageUrlsBySize": {
+                "90": "https://lh3.googleusercontent.com/UUQrkRTuRh4VslO6SsMzYNFucoH7wWIVTe_q3wpliMUgKe2zoAC9Yw3sfu8AZ5OdR8xsCIsBX_C6GswhBJQOfdU=s90-c"
+            },
+            "sourceDisplayName": "Back To My Southern Roots",
+            "ingredients": [
+                "pink salmon",
+                "onion",
+                "eggs",
+                "breadcrumbs",
+                "lemon juice",
+                "salt",
+                "ground pepper"
+            ],
+            "id": "Southern-Salmon-Patties-2557377",
+            "smallImageUrls": [
+                "https://lh3.googleusercontent.com/c3ka88X_Gpm2Md23t2c4iP0h0yMpA64kmouaCLuSB33DpiixW3YrKNF1K_HgGa9tuo2En-4wTelh9XRkevGs=s90"
+            ],
+            "recipeName": "Southern Salmon Patties",
+            "totalTimeInSeconds": 1200,
+            "attributes": {
+                "course": [
+                    "Main Dishes"
+                ]
+            },
+            "flavors": {
+                "piquant": 0.16666666666666666,
+                "meaty": 0.5,
+                "bitter": 0.5,
+                "sweet": 0.16666666666666666,
+                "sour": 0.16666666666666666,
+                "salty": 0.6666666666666666
+            },
+            "rating": 4
+        },
+        {
+            "imageUrlsBySize": {
+                "90": "https://lh3.googleusercontent.com/1sRneVeIt7c64tCetDy6xDhrX0rlf1HFstIjOO6MAkMOB_yr9TPzqGNUPKHO2onV9XVGYkN7dDKi3V8qsivzuw=s90-c"
+            },
+            "sourceDisplayName": "I Save A2Z",
+            "ingredients": [
+                "white sugar",
+                "water",
+                "blackberries",
+                "cold water",
+                "fresh lemon juice",
+                "ice cubes"
+            ],
+            "id": "Homemade-Blue-Lemonade-2536078",
+            "smallImageUrls": [
+                "https://lh3.googleusercontent.com/XpRHgw4VTJT09upEdPYtfAD1_XzsomTfybaGWseSyxmzBSAYzCEsonJi5Wm6HK_H8cZIJkzjOt0fFdjNyICPbz8=s90"
+            ],
+            "recipeName": "Homemade Blue Lemonade",
+            "totalTimeInSeconds": 300,
+            "attributes": {
+                "course": [
+                    "Beverages"
+                ],
+                "cuisine": [
+                    "Kid-Friendly"
+                ],
+                "holiday": [
+                    "Summer"
+                ]
+            },
+            "flavors": {
+                "piquant": 0,
+                "meaty": 0,
+                "bitter": 0,
+                "sweet": 0.3333333333333333,
+                "sour": 0.16666666666666666,
+                "salty": 0
+            },
+            "rating": 4
+        },
+        {
+            "imageUrlsBySize": {
+                "90": "https://lh3.googleusercontent.com/StrmA3saWArOfBccBvEnBEuAYFO9cvn3z4jfuxNdlmtgJKi9XsRtgRVOUwgQbmsDwmGwfLx2A1rS_g0N0aneTg=s90-c"
+            },
+            "sourceDisplayName": "FitLife.tv",
+            "ingredients": [
+                "cucumbers",
+                "celery",
+                "kale",
+                "lemon",
+                "apple",
+                "ginger"
+            ],
+            "id": "Maximum-Weight-Loss-Juice-2626014",
+            "smallImageUrls": [
+                "https://lh3.googleusercontent.com/59l5DQX1hUqTvbT9ll4y0FHpM6vbRi9rDQ7YlL_Ub1o_2YsvVALJwF1PPCiyfsLoWRHOv_HG2aDjWebi61JI=s90"
+            ],
+            "recipeName": "Maximum Weight Loss Juice",
+            "totalTimeInSeconds": 900,
+            "attributes": {
+                "course": [
+                    "Beverages"
+                ]
+            },
+            "flavors": null,
+            "rating": 3
+        },
+        {
+            "imageUrlsBySize": {
+                "90": "https://lh3.googleusercontent.com/h9mn6Njdxmv-VPi0SfwBJK5eJ7yTsYN2bv_MWk3cfl4RXjP1qjcHN9cGFNGAbxNca2v5gY4f6YRn8nysr5OvSw=s90-c"
+            },
+            "sourceDisplayName": "Averie Cooks",
+            "ingredients": [
+                "skin on salmon fillet",
+                "lemon",
+                "unsalted butter",
+                "lemon juice",
+                "honey",
+                "garlic",
+                "kosher salt",
+                "freshly ground black pepper",
+                "finely chopped fresh parsley"
+            ],
+            "id": "Sheet-Pan-Garlic-Lemon-Butter-Salmon-2571801",
+            "smallImageUrls": [
+                "https://lh3.googleusercontent.com/gLuJ3OTxYrvzaz6zIa1rxAabXE2rSR9IALhAcDkZ3kKVLTKwbO07LdqRDGngx-pddxcX9-U08CJ7jAH4Agr0aDs=s90"
+            ],
+            "recipeName": "Sheet Pan Garlic Lemon Butter Salmon",
+            "totalTimeInSeconds": 300,
+            "attributes": {
+                "course": [
+                    "Main Dishes"
+                ]
+            },
+            "flavors": {
+                "piquant": 0,
+                "meaty": 0.8333333333333334,
+                "bitter": 0.16666666666666666,
+                "sweet": 0.3333333333333333,
+                "sour": 0.6666666666666666,
+                "salty": 0.5
+            },
+            "rating": 4
+        },
+        {
+            "imageUrlsBySize": {
+                "90": "https://lh3.googleusercontent.com/vSkOSA8q83sBnnXRHXpKvXMYacCjM4ZVopqOqeiyZIX7M2ZpRPWNOw2hoAl0Zf7_QqGcSE1wlhchFJ_AwpO1Yw=s90-c"
+            },
+            "sourceDisplayName": "Two Cups of Health",
+            "ingredients": [
+                "artichokes",
+                "olive oil",
+                "lemon",
+                "oregano",
+                "thyme",
+                "rosemary",
+                "garlic salt"
+            ],
+            "id": "Mediterranean-Grilled-Artichokes-2401284",
+            "smallImageUrls": [
+                "https://lh3.googleusercontent.com/HNC31Yd2TAZNx3Cc2N36keIdrSTqEcqV23E7NayJWok8WXDuOODgwSPCQaaSGMmRUY6zBGBAnlCqAmQAQDU5=s90"
+            ],
+            "recipeName": "Mediterranean Grilled Artichokes",
+            "totalTimeInSeconds": 3000,
+            "attributes": {
+                "cuisine": [
+                    "Barbecue",
+                    "Mediterranean"
+                ]
+            },
+            "flavors": {
+                "piquant": 0,
+                "meaty": 0.16666666666666666,
+                "bitter": 0.16666666666666666,
+                "sweet": 0.16666666666666666,
+                "sour": 0.8333333333333334,
+                "salty": 0.16666666666666666
+            },
+            "rating": 4
+        }
+    ],
+    "facetCounts": {},
+    "totalMatchCount": 209329,
+    "attribution": {
+        "html": "Recipe search powered by <a href='http://www.yummly.co/recipes'><img alt='Yummly' src='https://static.yummly.co/api-logo.png'/></a>",
+        "url": "http://www.yummly.co/recipes/",
+        "text": "Recipe search powered by Yummly",
+        "logo": "https://static.yummly.co/api-logo.png"
+    }
+}

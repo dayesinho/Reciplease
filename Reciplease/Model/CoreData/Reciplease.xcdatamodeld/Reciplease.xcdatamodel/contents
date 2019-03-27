@@ -20,7 +20,7 @@
     </entity>
     <elements>
         <element name="IngredientEntity" positionX="124.47265625" positionY="-70.40234375" width="128" height="75"/>
-        <element name="RecipeEntity" positionX="-124.484375" positionY="-38.96875" width="128" height="163"/>
+        <element name="RecipeEntity" positionX="-124.484375" positionY="-38.96875" width="128" height="165"/>
         <element name="StepIngredientEntity" positionX="126.90625" positionY="153.7890625" width="128" height="75"/>
     </elements>
 </model>

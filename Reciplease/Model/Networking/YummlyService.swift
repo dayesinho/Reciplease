@@ -21,10 +21,10 @@ class YummlyService {
     
     func getIngredientsSeparated(ingredientArray: [String]) -> String {
         
-        let ingredientsSeparated = ingredientArray.map({ $0.lowercased() }).joined(separator: "&allowedIngredient[]=").replacingOccurrences(of: " ", with: "")
+        let ingredientsSeparated = ingredientArray.map({ $0.lowercased() }).joined(separator: "&allowedIngredient[]=").replacingOccurrences(of: " ", with: "%20")
         return "&q=&allowedIngredient[]=" + ingredientsSeparated
     }
-    
+        
 // API call to search the recipes:
     
     func searchRecipes(params: [String], completionHandler: @escaping (Bool, SearchRecipes?) -> Void) {
@@ -40,7 +40,7 @@ class YummlyService {
                 completionHandler(false, nil)
                 return
             }
-            guard let recipes = try? JSONDecoder().decode(SearchRecipes?.self, from: data) else {
+            guard let recipes = ((try? JSONDecoder().decode(SearchRecipes?.self, from: data)) as SearchRecipes??) else {
                 completionHandler(false, nil)
                 return
             }
@@ -63,7 +63,7 @@ class YummlyService {
                 completionHandler(false, nil)
                 return
             }
-            guard let recipes = try? JSONDecoder().decode(GetRecipe?.self, from: data) else {
+            guard let recipes = ((try? JSONDecoder().decode(GetRecipe?.self, from: data)) as GetRecipe??) else {
                 completionHandler(false, nil)
                 return
             }

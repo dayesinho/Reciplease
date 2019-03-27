@@ -9,7 +9,7 @@
 import UIKit
 
 class ResultTableViewCell: UITableViewCell {
-    
+ 
     @IBOutlet weak var recipeImageView: UIImageView!
     @IBOutlet weak var recipeTitleLabel: UILabel!
     @IBOutlet weak var ingredientsLabel: UILabel!
@@ -25,8 +25,11 @@ class ResultTableViewCell: UITableViewCell {
         didSet {
             
             guard let imageURL = URL(string: recipeData.smallImageUrls[0].updateSizeOfUrlImageString) else { return }
-            guard let recipeImage = try? Data(contentsOf: imageURL) else { return }
-            recipeImageView.image = UIImage(data: recipeImage)
+            if let imageFromURL = try? Data(contentsOf: imageURL) {
+                recipeImageView.image = UIImage(data: imageFromURL)
+            } else {
+                recipeImageView.image = UIImage(named: "NotAvailable")
+            }
             addGradientSmall(imageView: recipeImageView)
             recipeTitleLabel.text = recipeData.recipeName
             let stringArray = recipeData.ingredients.map { $0 }
@@ -44,5 +47,13 @@ class ResultTableViewCell: UITableViewCell {
         
         guard let formattedString = formatter.string(from: TimeInterval(time)) else { return "" }
         return formattedString
+    }
+    
+    private func addGradientSmall(imageView: UIImageView) {
+        let layer = CAGradientLayer()
+        layer.frame = CGRect(x: 0, y: 0, width: screenWidth, height: 200)
+        layer.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
+        layer.locations = [0.7]
+        imageView.layer.addSublayer(layer)
     }
 }
