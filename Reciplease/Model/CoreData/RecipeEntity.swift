@@ -9,6 +9,9 @@
 import UIKit
 import CoreData
 
+
+// Methods to handle the datas on Core Data
+
 class RecipeEntity: NSManagedObject {
     
     static func fetchAll(viewContext: NSManagedObjectContext = AppDelegate.viewContext) -> [RecipeEntity] {

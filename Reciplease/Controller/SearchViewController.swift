@@ -112,7 +112,7 @@ class SearchViewController: UIViewController {
             } else {
                 self.errorVibration()
 
-                self.showAlert(title: "Something went wrong...", message: "We weren't able to find a recipe with your ingredients. Go back, and check the name of your ingredients in the list.")
+                self.showAlert(title: "Something went wrong...", message: "We weren't able to find a recipe with your ingredients. Please, check the name of your ingredients in the list.")
             }
         }
     }
